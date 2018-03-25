@@ -37,7 +37,6 @@ class ContextTestCase(TestCase):
         expect(ctx.filters_factory).to_be_instance_of(FiltersFactory)
         expect(ctx.filters_factory.filter_classes_map).to_be_empty()
         expect(ctx.request_handler).to_be_null()
-        expect(ctx.statsd_client).to_equal(ctx.metrics)
         expect(ctx.thread_pool).to_be_instance_of(ThreadPool)
         expect(ctx.headers).to_be_instance_of(dict)
         expect(ctx.headers).to_be_empty()
